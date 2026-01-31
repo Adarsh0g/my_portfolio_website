@@ -1,289 +1,286 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adarsh Gaikwad | Data Scientist Portfolio</title>
+<meta charset="UTF-8">
+<title>Adarsh Gaikwad | Data Scientist</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        body {
-            background: #f9fafb;
-            color: #1f2937;
-            line-height: 1.6;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+body{
+    background:radial-gradient(circle at top,#0f172a,#020617);
+    color:#e5e7eb;
+}
 
-        /* Header */
-        header {
-            background: white;
-            padding: 60px 20px;
-            text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
+/* ===== HERO ===== */
+.hero{
+    min-height:100vh;
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    align-items:center;
+    padding:80px 8%;
+    gap:60px;
+}
 
-        header img {
-            width: 160px;
-            height: 160px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 5px solid #e5e7eb;
-            margin-bottom: 20px;
-        }
+.hero h1{
+    font-size:3.8rem;
+    font-weight:800;
+    line-height:1.1;
+}
 
-        header h1 {
-            font-size: 2.4rem;
-            font-weight: 700;
-        }
+.hero span{
+    background:linear-gradient(135deg,#38bdf8,#22c55e);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
 
-        header p {
-            margin-top: 8px;
-            color: #6b7280;
-            font-size: 1.1rem;
-        }
+.hero p{
+    margin:25px 0;
+    font-size:1.2rem;
+    color:#94a3b8;
+    max-width:520px;
+}
 
-        .contact {
-            margin-top: 15px;
-            font-size: 0.95rem;
-            color: #374151;
-        }
+.hero-btns a{
+    display:inline-block;
+    margin-right:15px;
+    padding:14px 30px;
+    border-radius:14px;
+    font-weight:600;
+    transition:.4s;
+}
 
-        /* Section */
-        section {
-            max-width: 1100px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
+.btn-primary{
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+}
 
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            position: relative;
-        }
+.btn-primary:hover{
+    transform:translateY(-5px);
+    box-shadow:0 20px 40px rgba(37,99,235,.45);
+}
 
-        section h2::after {
-            content: '';
-            width: 60px;
-            height: 4px;
-            background: #3b82f6;
-            display: block;
-            margin-top: 8px;
-            border-radius: 2px;
-        }
+.btn-outline{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
 
-        /* About */
-        .about p {
-            color: #4b5563;
-            max-width: 900px;
-        }
+.btn-outline:hover{
+    background:#38bdf8;
+    color:#020617;
+}
 
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-        }
+/* ===== PROFILE ===== */
+.profile-wrap{
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#38bdf8,#22c55e);
+    padding:8px;
+    animation:float 6s ease-in-out infinite;
+}
 
-        .skill-card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
+.profile-wrap img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    object-fit:cover;
+    background:#020617;
+}
 
-        .skill-card:hover {
-            transform: translateY(-6px);
-        }
+@keyframes float{
+    0%{transform:translateY(0)}
+    50%{transform:translateY(-18px)}
+    100%{transform:translateY(0)}
+}
 
-        .skill-card h3 {
-            margin-bottom: 10px;
-            color: #2563eb;
-        }
+/* ===== SECTIONS ===== */
+section{
+    padding:100px 8%;
+}
 
-        /* Projects */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
+.section-title{
+    font-size:2.6rem;
+    font-weight:800;
+    margin-bottom:60px;
+}
 
-        .project-card {
-            background: white;
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.07);
-            transition: all 0.3s ease;
-        }
+.section-title::after{
+    content:'';
+    width:80px;
+    height:5px;
+    background:linear-gradient(135deg,#38bdf8,#22c55e);
+    display:block;
+    margin-top:15px;
+    border-radius:10px;
+}
 
-        .project-card:hover {
-            transform: translateY(-8px);
-        }
+/* ===== CARDS ===== */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+}
 
-        .project-card h3 {
-            color: #1d4ed8;
-            margin-bottom: 10px;
-        }
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(12px);
+    border-radius:26px;
+    padding:40px;
+    box-shadow:0 30px 70px rgba(0,0,0,.6);
+    transition:all .6s cubic-bezier(.16,1,.3,1);
+}
 
-        .project-card p {
-            color: #4b5563;
-            margin-bottom: 15px;
-        }
+.card:hover{
+    transform:translateY(-15px) scale(1.02);
+    box-shadow:0 50px 120px rgba(0,0,0,.8);
+}
 
-        .project-links a {
-            display: inline-block;
-            margin-right: 10px;
-            padding: 8px 14px;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
+.card h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
 
-        .demo {
-            background: #3b82f6;
-            color: white;
-        }
+/* ===== PROJECT LINKS ===== */
+.project-links a{
+    display:inline-block;
+    margin-top:20px;
+    margin-right:12px;
+    padding:10px 22px;
+    border-radius:10px;
+    font-size:.9rem;
+    font-weight:600;
+    transition:.4s;
+}
 
-        .code {
-            background: #e5e7eb;
-            color: #1f2937;
-        }
+.demo{
+    background:#2563eb;
+    color:white;
+}
 
-        /* Education & Certification */
-        .list-box {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            margin-bottom: 20px;
-        }
+.demo:hover{
+    box-shadow:0 15px 40px rgba(37,99,235,.5);
+}
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px 10px;
-            color: #6b7280;
-            font-size: 0.9rem;
-        }
-    </style>
+.code{
+    background:rgba(255,255,255,.15);
+    color:#e5e7eb;
+}
+
+/* ===== FOOTER ===== */
+footer{
+    text-align:center;
+    padding:50px 20px;
+    color:#94a3b8;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:900px){
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+    .hero h1{
+        font-size:3rem;
+    }
+}
+</style>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <img src="static/profile_photo.jpeg" alt="Adarsh Gaikwad">
-        <h1>Adarsh Gaikwad</h1>
-        <p>Data Scientist | Machine Learning | Generative AI</p>
-        <div class="contact">
-            📧 adarshhg001@gmail.com | 📞 +91 7058778881
-        </div>
-    </header>
-
-    <!-- ABOUT -->
-    <section class="about">
-        <h2>About Me</h2>
+<!-- HERO -->
+<div class="hero">
+    <div data-aos="fade-right">
+        <h1>Hi, I'm <span>Adarsh</span><br>Data Scientist</h1>
         <p>
-            Data Scientist with strong skills in Python (NumPy, Pandas, Matplotlib) and SQL for data analysis and visualization.
-            Familiar with Machine Learning concepts and Generative AI techniques for building data-driven solutions.
-            Passionate about transforming data into actionable business insights.
+            I design and build intelligent data-driven systems using
+            Python, Machine Learning, and Generative AI.
         </p>
-    </section>
+        <div class="hero-btns">
+            <a class="btn-primary" href="#projects">View Projects</a>
+            <a class="btn-outline" href="mailto:adarshhg001@gmail.com">Contact</a>
+        </div>
+    </div>
 
-    <!-- SKILLS -->
-    <section>
-        <h2>Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Data Analytics & Visualization</h3>
-                <p>Python, Pandas, NumPy, Matplotlib, Power BI, Excel, Data Cleaning, Jupyter Notebook</p>
-            </div>
-            <div class="skill-card">
-                <h3>Machine Learning & AI</h3>
-                <p>Supervised Learning, Scikit-Learn, Feature Engineering, Model Evaluation, Generative AI</p>
-            </div>
-            <div class="skill-card">
-                <h3>Databases & Tools</h3>
-                <p>MySQL, SQL Queries, ETL Concepts, Flask, REST APIs, Git, VS Code</p>
-            </div>
-            <div class="skill-card">
-                <h3>Soft Skills</h3>
-                <p>Problem Solving, Communication, Collaboration, Agile Development, Adaptability</p>
+    <div data-aos="fade-left" style="display:flex;justify-content:center;">
+        <div class="profile-wrap">
+            <img src="static/profile_photo.jpeg"
+                 alt="Adarsh Gaikwad">
+        </div>
+    </div>
+</div>
+
+<!-- SKILLS -->
+<section>
+    <h2 class="section-title" data-aos="fade-up">Skills</h2>
+    <div class="grid">
+        <div class="card" data-aos="zoom-in">Python, Pandas, NumPy, Matplotlib, Power BI</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">Machine Learning, Scikit-Learn, Feature Engineering</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">SQL, MySQL, Flask, REST APIs</div>
+        <div class="card" data-aos="zoom-in" data-aos-delay="300">Problem Solving, Communication, Collaboration</div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2 class="section-title" data-aos="fade-up">Projects</h2>
+    <div class="grid">
+
+        <div class="card" data-aos="fade-up">
+            <h3>AI Job Recommendation System</h3>
+            <p>ML web app that recommends job roles based on user skills.</p>
+            <div class="project-links">
+                <a class="demo" href="https://adarshgaikwad01.pythonanywhere.com/" target="_blank">Live</a>
+                <a class="code" href="https://github.com/Adarsh0g/p12" target="_blank">Code</a>
             </div>
         </div>
-    </section>
 
-    <!-- PROJECTS -->
-    <section>
-        <h2>Projects</h2>
-        <div class="projects-grid">
-
-            <div class="project-card">
-                <h3>AI Job Recommendation System</h3>
-                <p>ML-based web app that recommends job roles based on user skills using Python and Flask.</p>
-                <div class="project-links">
-                    <a class="demo" href="https://adarshgaikwad01.pythonanywhere.com/" target="_blank">Live Demo</a>
-                    <a class="code" href="https://github.com/Adarsh0g/p12" target="_blank">Source Code</a>
-                </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="150">
+            <h3>Health Risk Prediction</h3>
+            <p>Predictive ML system analyzing health and lifestyle data.</p>
+            <div class="project-links">
+                <a class="demo" href="https://adarshgaikwad1.pythonanywhere.com/" target="_blank">Live</a>
+                <a class="code" href="https://github.com/Adarsh0g/p6" target="_blank">Code</a>
             </div>
+        </div>
 
-            <div class="project-card">
-                <h3>Health Risk Prediction System</h3>
-                <p>Predictive ML model analyzing health and lifestyle data with real-time Flask deployment.</p>
-                <div class="project-links">
-                    <a class="demo" href="https://adarshgaikwad1.pythonanywhere.com/" target="_blank">Live Demo</a>
-                    <a class="code" href="https://github.com/Adarsh0g/p6" target="_blank">Source Code</a>
-                </div>
+        <div class="card" data-aos="fade-up" data-aos-delay="300">
+            <h3>House Price Prediction</h3>
+            <p>Regression model predicting real-estate prices.</p>
+            <div class="project-links">
+                <a class="demo" href="https://adarshgaikwad.pythonanywhere.com/" target="_blank">Live</a>
+                <a class="code" href="https://github.com/Adarsh0g/p4" target="_blank">Code</a>
             </div>
-
-            <div class="project-card">
-                <h3>House Price Prediction Model</h3>
-                <p>Regression model predicting property prices using structured housing features.</p>
-                <div class="project-links">
-                    <a class="demo" href="https://adarshgaikwad.pythonanywhere.com/" target="_blank">Live Demo</a>
-                    <a class="code" href="https://github.com/Adarsh0g/p4" target="_blank">Source Code</a>
-                </div>
-            </div>
-
         </div>
-    </section>
 
-    <!-- CERTIFICATION -->
-    <section>
-        <h2>Certifications</h2>
-        <div class="list-box">
-            <p>📜 Data Science – CJC, Kothrud Pune</p>
-        </div>
-    </section>
+    </div>
+</section>
 
-    <!-- EDUCATION -->
-    <section>
-        <h2>Education</h2>
-        <div class="list-box">
-            <p><strong>BBA (Computer Application)</strong> – SPPU (CGPA: 7.5)</p>
-            <p>Marathwada Mitra Mandal College, Pune (2022–2025)</p>
-        </div>
-        <div class="list-box">
-            <p><strong>HSC</strong> – Maharashtra State Board (86.83%)</p>
-            <p>Swami Vivekanand College, Parbhani</p>
-        </div>
-    </section>
+<footer>
+    © 2026 Adarsh Gaikwad • Dark Portfolio
+</footer>
 
-    <footer>
-        © 2026 Adarsh Gaikwad | Designed for Data Roles 🚀
-    </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+    duration:1200,
+    easing:'ease-in-out',
+    once:true
+});
+</script>
 
 </body>
 </html>
